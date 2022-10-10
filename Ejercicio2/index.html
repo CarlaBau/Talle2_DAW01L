@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+
+    <title>Orden de pollo</title>
+</head>
+
+<body>
+    <header>
+        <H1>
+            <font color="white">ORDEN DE</font> POLLO
+        </H1>
+    </header>
+    <div class="container">
+        <br>
+        <h3>Combos y Productos</h3>
+
+        <!--Combos-->
+        <form onchange="iniciar()">
+            <h6>Combos:</h6>
+            <input type="radio" name="grp1" value="Super Combo" id="combo1" checked> Super Combo</input>
+
+            <input type="radio" name="grp1" value="Combo_personal" id="combo2"> Combo Personal</input>
+
+            <input type="radio" name="grp1" value="Combo_infantil" id="combo3"> Combo Infantil</input>
+            <!--Productos-->
+            <br>
+            <h6>Productos:</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="Ensalada">Ensalada</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Papas_fritas">Papas Fritas</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Pieza_grande">Pieza de Pollo Grande</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Pieza_mediana">Pieza de Pollo
+                Mediana</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Pieza_pequeña">Pieza de Pollo
+                Pequeña</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Bebida_Grande">Bebida Grande</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Bebida_Mediana">Bebida Mediana</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Bebida_Pequeña">Bebida Pequeña</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Cafe">Cafe</input>
+                <br>
+                <input class="form-check-input" type="checkbox" value="" id="Postre">Postre</input>
+            </div>
+            <!--Div no editable de sugerencias-->
+            <div>
+                <h6 for="Textarea" class="form-label">Sugerencias:</h6>
+                <div id="view"></div>
+                <textarea name="message" class="form-control" id="area" value="Tu mensaje" id="message"></textarea>
+            </div>
+            <br>
+            <h6>Total a pagar: $</h6><input type="textarea" id="subtotal">
+            <br>
+            <div id="detalle" style="display: none;">
+                <input type="text" id="supercombo">
+                <input type="text" id="combomediano">
+                <input type="text" id="comboinfantil">
+                <input type="text" id="papasfritas">
+                <input type="text" id="ensalada">
+                <input type="text" id="piezagrande">
+                <input type="text" id="piezamediana">
+                <input type="text" id="piezapequena">
+                <input type="text" id="bebidagrande">
+                <input type="text" id="bebidamediana">
+                <input type="text" id="bebidapequena">
+                <input type="text" id="cafe">
+                <input type="text" id="postre">
+            </div>
+            <br>
+            <input type="submit" id="enviar" onclick="myFunction()">
+
+        </form>
+    </div>
+
+</body>
+
+<script src="js/index.js"></script>
+<script src="js/sugerencias.js"></script>
+
+</html>
